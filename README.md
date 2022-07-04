@@ -33,7 +33,7 @@ To use an example bash automation following tools need to be installed on the lo
 
 ### Example setup
 
-There are the step to use terraform locally with an bash automation, but you can also use Schematics on IBM Cloud for the setup. Here is a blog post which does cover an example usage of Schematics [link](https://suedbroecker.net/2022/01/26/instantiation-of-a-red-hat-openshift-cluster-in-a-multizone-vpc-ibm-cloud-environment-using-the-free-ibm-cloud-schematics-terraform-as-a-service/).
+There are the step to use terraform locally with a bash automation, but you can also use Schematics on IBM Cloud for the setup. Here is a blog post which does cover an example usage of Schematics [link](https://suedbroecker.net/2022/01/26/instantiation-of-a-red-hat-openshift-cluster-in-a-multizone-vpc-ibm-cloud-environment-using-the-free-ibm-cloud-schematics-terraform-as-a-service/).
 
 ### Step 1: Clone the repo
 
@@ -70,4 +70,3 @@ export GROUP="default"
 ```sh
 create_vpc_kubernetes_cluster_with_terraform.sh
 ```
-
