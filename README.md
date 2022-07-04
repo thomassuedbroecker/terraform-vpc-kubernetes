@@ -54,7 +54,13 @@ nano variables.tf
 cat variables_template.env > variables.env
 ```
 
-### Step 4: Add an IBM Cloud access key to your local file
+### Step 4: Add an IBM Cloud access key to your local `variables.env` file
+
+```sh
+nano variables.env
+```
+
+Content of the file:
 
 ```sh
 export IC_API_KEY=YOUR_IBM_CLOUD_ACCESS_KEY
