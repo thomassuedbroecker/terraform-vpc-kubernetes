@@ -8,10 +8,10 @@ variable "worker_count" {
   description = "Default worker node count is set to 2."
 }
 
-#variable "zone" {
-#  default = "us-south-1"
-#  description = "Used availability zone on IBM Cloud."
-#}
+variable "kubernetes_pricing" {
+  default = "tiered-pricing"
+  description = "Kubernetes Cluster pricing."
+}
 
 variable "resource_group" {
   default = "default"

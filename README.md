@@ -19,3 +19,4 @@ The example is based on following resources:
 | kube_version | The tested Kubernetes Cluster version for the example is 1.23.8. | String | 1.23.8 |
 | cluster_name | Kubernetes Cluster Name running in VPC Gen2. | String | operator-sample-ks-cluster |
 | worker_pool_name | The worker pool for the Kubernetes cluster. | String | operator-sample-ks-vpc2-worker-pool |
+| kubernetes_pricing | Kubernetes Cluster pricing. | String | tiered-pricing |

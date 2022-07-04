@@ -36,8 +36,8 @@ data "ibm_resource_group" "resource_group" {
 resource "ibm_resource_instance" "kms_instance1" {
     name              = "operator_sample_kms"
     service           = "kms"
-    plan              = "tiered-pricing"
-    location          = "us-south"
+    plan              = var.kubernetes_pricing
+    location          = var.region
 }
   
 resource "ibm_kms_key" "operator-sample" {
