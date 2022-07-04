@@ -14,9 +14,8 @@ The example is based on following resources:
 | worker_count | Default worker node count is set to 2. | Integer | 2 |
 | resource_group | IBM Cloud resource group name. | String | default |
 | name | The Kubernetes Cluster name. | String | operator-sample-kubernetes-cluster |
-| vpc_name | The Virtual Private Cloud name. | String | vpc-operator-sample |
+| vpc_name | The Virtual Private Cloud name. | String |operator-sample |
 | region | IBM Cloud region for the Kubernetes Cluster and the VPC | String | us-south |
 | kube_version | The tested Kubernetes Cluster version for the example is 1.23.8. | String | 1.23.8 |
 | cluster_name | Kubernetes Cluster Name running in VPC Gen2. | String | operator-sample-ks-cluster |
-| worker_pool_name | The worker pool for the Kubernetes cluster. | String | operator-sample-ks-vpc2-worker-pool |
 | kubernetes_pricing | Kubernetes Cluster pricing. | String | tiered-pricing |

@@ -24,7 +24,7 @@ variable "name" {
 }
 
 variable "vpc_name" {
-  default = "vpc-operator-sample"
+  default = "operator-sample"
   description = "The Virtual Private Cloud name."
 }
 
@@ -41,9 +41,4 @@ variable "kube_version" {
 variable "cluster_name" {
   default = "operator-sample-ks-cluster"
   description = "Kubernetes Cluster Name running in VPC Gen2."
-}
-
-variable "worker_pool_name" {
-  default = "operator-sample-ks-vpc2-worker-pool"
-  description = "The worker pool for the Kubernetes cluster."
 }
