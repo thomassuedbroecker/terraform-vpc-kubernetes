@@ -11,10 +11,13 @@ echo "1. Logon with IBM Cloud CLI "
 ibmcloud login --apikey $IC_API_KEY
 ibmcloud target -r $REGION
 ibmcloud target -g $GROUP
-ibmcloud plugin install vpc-infrastructure
 ibmcloud plugin update
 ibmcloud plugin list
 ibmcloud is target --gen 2
+
+# **************** install needed plugins **************** 
+#ibmcloud plugin install vpc-infrastructure
+#ibmcloud plugin install container-service
 
 # **************** init **************** 
 

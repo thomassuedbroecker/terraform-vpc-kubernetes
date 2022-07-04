@@ -67,7 +67,7 @@ resource "ibm_container_vpc_cluster" "cluster" {
 
 resource "ibm_container_vpc_worker_pool" "cluster_pool" {
   cluster           = ibm_container_vpc_cluster.cluster.id
-  worker_pool_name  = "${var.worker_pool_name}${random_id.name1.hex}"
+  worker_pool_name  = "${var.worker_pool_name}"
   flavor            = var.flavor
   vpc_id            = ibm_is_vpc.vpc1.id
   worker_count      = var.worker_count
