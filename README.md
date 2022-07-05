@@ -6,7 +6,32 @@ The example is based on following resources:
 
 * [IBM Cloud VPC Gen 2 cluster example](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-gen2-cluster)
 * [Terraform Registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_vpc_cluster)
+* [Networking for the VPC and Kubernetes Clusters](https://cloud.ibm.com/docs/containers?topic=containers-plan_vpc_basics)
 
+### Simplified Architecture diagram
+
+It creates/configures on IBM Cloud:
+
+* 1 x VPC
+
+    * 3 x Security Groups
+
+      * 1 x Default
+      * 2 x Related to the Kubernetes Cluster (created by the Kubernetes Service creation)
+    
+    * 1 x Access control list
+    * 1 x Routing table
+    * 1 x Virtual Private Endpoint Gateway (created by the Kubernetes Service creation)
+    * 1 x Public load balancer (created by the Kubernetes Service creation)
+
+* 1 Kubernetes Cluster 
+
+    * Including 3 [fully IBM managed master nodes](https://cloud.ibm.com/docs/containers?topic=containers-cs_ov)
+    * Configured 2 Worker nodes (managed by IBM) ([see responsibilities](https://cloud.ibm.com/docs/containers?topic=containers-responsibilities_iks))
+    * Enabled [Block Storage for VPC](http://ibm.biz/addon-state)
+    * Enabled service endpoint for public and private communication
+
+![](images/VPC-Kubernetes-simplified-architecture.drawio.png)
 
 ### Terraform variables
 
@@ -41,7 +66,7 @@ git clone https://github.com/thomassuedbroecker/terraform-vpc-kubernetes.git
 cd terraform-vpc-kubernetes
 ```
 
-### Step 2: Verify the configuation of the `variables.tf` file
+### Step 2: Verify the configuration of the `variables.tf` file
 
 ```sh
 nano variables.tf
@@ -70,7 +95,7 @@ export GROUP="default"
 
 ### Step 5: Execute the bash automation
 
->The creation can take up to 2 hours!
+>The creation can take up to 2 hours, depending on the which region you are using.
 
 ```sh
 create_vpc_kubernetes_cluster_with_terraform.sh
