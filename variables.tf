@@ -18,11 +18,6 @@ variable "resource_group" {
   description = "IBM Cloud resource group name."
 }
 
-variable "name" {
-  default = "operator-sample-kubernetes-cluster"
-  description = "The Kubernetes Cluster name."
-}
-
 variable "vpc_name" {
   default = "operator-sample"
   description = "The Virtual Private Cloud name."

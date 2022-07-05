@@ -15,7 +15,6 @@ The example is based on following resources:
 | flavor | Default worker node flaver. Use 'ibmcloud ks flavors --zone us-south-1' to verify the availability. | String | bx2.4x16 |
 | worker_count | Default worker node count is set to 2. | Integer | 2 |
 | resource_group | IBM Cloud resource group name. | String | default |
-| name | The Kubernetes Cluster name. | String | operator-sample-kubernetes-cluster |
 | vpc_name | The Virtual Private Cloud name. | String |operator-sample |
 | region | IBM Cloud region for the Kubernetes Cluster and the VPC | String | us-south |
 | kube_version | The tested Kubernetes Cluster version for the example is 1.23.8. | String | 1.23.8 |
