@@ -29,8 +29,8 @@ variable "region" {
 }
 
 variable "kube_version" {
-  default = "1.23.8"
-  description = "The tested Kubernetes Cluster version for the example is 1.23.8."
+  default = "1.25.6"
+  description = "The tested Kubernetes Cluster version for the example is 1.25.6."
 }
 
 variable "cluster_name" {
